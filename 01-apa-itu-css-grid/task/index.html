@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS GRID</title>
+  <style>
+    html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .content {
+      text-align: center;
+      display: grid;
+      grid-template-areas: "header header"
+                            "aside main"
+                            "nav main"
+                            "footer footer";
+      grid-template-columns: 1fr 1.5fr;
+      grid-template-rows: 1fr 1fr 1.3fr;
+      margin: auto;
+      background-color: red;
+    }
+
+    header {
+      grid-area: header;
+      background-color: blue;
+      text-align: center;
+      width: 100%;
+    }
+    
+    aside {
+      grid-area: aside;
+      background-color: green;
+    }
+
+    nav {
+      grid-area: nav;
+      background-color: aqua;
+    }
+
+    main {
+      grid-area: main;
+      background-color: aliceblue;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: purple;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="content">
+    <header>HEADER</header>
+    <main>MAIN</main>
+    <aside>ASIDE</aside>
+    <nav>NAV</nav>
+    <footer>FOOTER</footer>
+  </div>
+</body>
+</html>
