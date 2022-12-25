@@ -3,3 +3,5 @@ yang akan dibahas di sini adalah :
 - min-content & max-content
 - minmax()
 - auto-fill & auto-fit
+
+pemaikaian auto-fill/fit biasanya digunakan bersama repeat()

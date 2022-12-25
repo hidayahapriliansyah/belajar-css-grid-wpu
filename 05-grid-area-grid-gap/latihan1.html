@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid | Grid Area & Grid Gap</title>
+  <style>
+    * {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 80%;
+      margin: 50px auto;
+      display: grid;
+      /* grid-template-rows: [baris1-awal] 50px [baris1-akhir baris2-awal] 100px [baris-2akhir];
+      grid-template-columns: 1fr 2fr 3fr;
+      grid-template-areas: 
+        "header header header"
+        "footer footer footer"; */
+      grid-template: [baris1-awal] 'header header header' 50px [baris1-akhir baris2-awal] 'footer footer footer' 100px [baris-2akhir] / 1fr 2fr 3fr;
+      grid-gap: 3px;
+    }
+
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: aquamarine;
+    }
+
+    .item:nth-child(even) {
+      background-color: azure;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <!-- <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div> -->
+  </div>
+</body>
+</html>
